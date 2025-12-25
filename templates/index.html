@@ -1,8 +1,16 @@
-
 {% extends 'base.html' %}
 {% load static %}
 {% block content %}
-
+  <body>
+    <div id="preloader-active">
+      <div class="preloader d-flex align-items-center justify-content-center">
+        <div class="preloader-inner position-relative">
+          <div class="text-center"><img class="mb-10" src="assets/imgs/template/favicon.svg" alt="GenZ">
+            <div class="preloader-dots"></div>
+          </div>
+        </div>
+      </div>
+    </div>
 
     <div class="mobile-header-active mobile-header-wrapper-style perfect-scrollbar bg-gray-900">
       <div class="mobile-header-wrapper-inner">
@@ -90,7 +98,7 @@
               <div class="banner">
                 <div class="row align-items-end">
                   <div class="col-lg-6 pt-100"><span class="text-sm-bold color-gray-600 wow animate__animated animate__fadeInUp">Hello Everyone!</span>
-                    <h1 class="color-gray-50 mt-20 mb-20 wow animate__animated animate__fadeInUp">Abdulloh<a class="typewrite color-linear" href="#" data-period="3000" data-type="[ &quot;Python Beckend&quot;, &quot;IT&quot;, &quot;Programmer&quot; ]"></a></h1>
+                    <h1 class="color-gray-50 mt-20 mb-20 wow animate__animated animate__fadeInUp">I’m<a class="typewrite color-linear" href="#" data-period="3000" data-type="[ &quot;Brian Clark&quot;, &quot;Designer&quot;, &quot;Creator&quot; ]"></a></h1>
                     <div class="row">
                       <div class="col-lg-9">
                         <p class="text-base color-gray-600 wow animate__animated animate__fadeInUp">I use animation as a third dimension by which to simplify experiences and kuiding thro each and every interaction. I’m not adding motion just to spruce things up, but doing it in ways that.</p>
@@ -154,7 +162,7 @@
                             </div>
                             <div class="swiper-slide">
                               <div class="card-style-1"><a href="blog-archive.html">
-                                  <div class="card-image"><img src="{% static 'imgs/page/homepage1/design.png" alt="Genz'%}">
+                                  <div class="card-image"><img src="assets/imgs/page/homepage1/design.png" alt="Genz">
                                     <div class="card-info">
                                       <div class="info-bottom">
                                         <h6 class="color-white mb-5">Design</h6>
@@ -207,7 +215,7 @@
                         <h4 class="color-white mt-20"> Self-observation is the first step of inner unfolding</h4></a>
                       <div class="row align-items-center mt-25">
                         <div class="col-7">
-                          <div class="box-author"><img src="{% static 'imgs/page/homepage1/author.png'%}" alt="Genz">
+                          <div class="box-author"><img src="assets/imgs/page/homepage1/author.png" alt="Genz">
                             <div class="author-info">
                               <h6 class="color-gray-700">Joseph</h6><span class="color-gray-700 text-sm">25 Nov 2022</span>
                             </div>
@@ -319,7 +327,7 @@
               <div class="row mt-70 mb-50">
                 <div class="col-xl-2 col-lg-3 col-md-4 col-sm-4 col-6">
                   <div class="card-style-2 hover-up hover-neon wow animate__animated animate__fadeIn" data-wow-delay="0s">
-                    <div class="card-image"><a href="blog-archive.html"><img src="{% static 'imgs/page/homepage1/tag1.png'%}" alt="Genz"></a></div>
+                    <div class="card-image"><a href="blog-archive.html"><img src="assets/imgs/page/homepage1/tag1.png" alt="Genz"></a></div>
                     <div class="card-info"><a class="color-gray-500" href="blog-archive.html">Travel</a></div>
                   </div>
                 </div>
@@ -463,7 +471,7 @@
                   </nav>
                 </div>
                 <div class="col-lg-4">
-                  <div class="sidebar">
+                  <div class="sidebar"> 
                     <div class="box-sidebar bg-gray-850 border-gray-800">
                       <div class="head-sidebar wow animate__animated animate__fadeIn">
                         <h5 class="line-bottom">Popular Posts</h5>
@@ -571,93 +579,4 @@
         </div>
       </div>
     </main>
-    <footer class="footer">
-      <div class="container">
-        <div class="footer-1 bg-gray-850 border-gray-800">
-          <div class="row">
-            <div class="col-lg-4 mb-30"><a class="wow animate__animated animate__fadeInUp" href="index.html"><img class="logo-night" src="assets/imgs/template/logo.svg" alt="Genz"><img class="d-none logo-day" alt="GenZ" src="assets/imgs/template/logo-day.svg"></a>
-              <p class="mb-20 mt-20 text-sm color-gray-500 wow animate__animated animate__fadeInUp">When an unknown prnoto sans took a galley and scrambled it to make specimen book not only five When an unknown prnoto sans took a galley and scrambled it to five centurie.</p>
-              <h6 class="color-white mb-5 wow animate__animated animate__fadeInUp">Address</h6>
-              <p class="text-sm color-gray-500 wow animate__animated animate__fadeInUp">123 Main Street<br>New York, NY 10001</p>
-            </div>
-            <div class="col-lg-4 mb-30">
-              <h6 class="text-lg mb-30 color-white wow animate__animated animate__fadeInUp">Categories</h6>
-              <div class="row">
-                <div class="col-6">
-                  <ul class="menu-footer">
-                    <li class="wow animate__animated animate__fadeInUp"><a class="color-gray-500" href="blog-archive.html">Action</a></li>
-                    <li class="wow animate__animated animate__fadeInUp"><a class="color-gray-500" href="blog-archive.html">Business</a></li>
-                    <li class="wow animate__animated animate__fadeInUp"><a class="color-gray-500" href="blog-archive.html">Adventure</a></li>
-                    <li class="wow animate__animated animate__fadeInUp"><a class="color-gray-500" href="blog-archive.html">Canada</a></li>
-                    <li class="wow animate__animated animate__fadeInUp"><a class="color-gray-500" href="blog-archive.html">America</a></li>
-                    <li class="wow animate__animated animate__fadeInUp"><a class="color-gray-500" href="blog-archive.html">Curiosity</a></li>
-                  </ul>
-                </div>
-                <div class="col-6">
-                  <ul class="menu-footer">
-                    <li class="wow animate__animated animate__fadeInUp"><a class="color-gray-500" href="blog-archive.html">Animal</a></li>
-                    <li class="wow animate__animated animate__fadeInUp"><a class="color-gray-500" href="blog-archive.html">Dental</a></li>
-                    <li class="wow animate__animated animate__fadeInUp"><a class="color-gray-500" href="blog-archive.html">Biology</a></li>
-                    <li class="wow animate__animated animate__fadeInUp"><a class="color-gray-500" href="blog-archive.html">Design</a></li>
-                    <li class="wow animate__animated animate__fadeInUp"><a class="color-gray-500" href="blog-archive.html">Breakfast</a></li>
-                    <li class="wow animate__animated animate__fadeInUp"><a class="color-gray-500" href="blog-archive.html">Dessert</a></li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-            <div class="col-lg-4 mb-30">
-              <h4 class="text-lg mb-30 color-white wow animate__animated animate__fadeInUp">Newsletter</h4>
-              <p class="text-base color-gray-500 wow animate__animated animate__fadeInUp">Sign up to be first to receive the latest stories inspiring us, case studies, and industry news.</p>
-              <div class="form-newsletters mt-15 wow animate__animated animate__fadeInUp">
-                <form action="#">
-                  <div class="form-group">
-                    <input class="input-name border-gray-500" type="text" placeholder="Your name">
-                  </div>
-                  <div class="form-group">
-                    <input class="input-email border-gray-500" type="email" placeholder="Emaill address">
-                  </div>
-                  <div class="form-group mt-20">
-                    <button class="btn btn-linear hover-up">
-                      Subscribe
-                      <i class="fi-rr-arrow-small-right"></i>
-                    </button>
-                  </div>
-                </form>
-              </div>
-            </div>
-          </div>
-          <div class="footer-bottom border-gray-800">
-            <div class="row">
-              <div class="col-lg-5 text-center text-lg-start">
-                <p class="text-base color-white wow animate__animated animate__fadeIn">© Created by<a class="copyright" href="http://alithemes.com" target="_blank"> AliThemes.com</a></p>
-              </div>
-              <div class="col-lg-7 text-center text-lg-end">
-                <div class="box-socials">
-                  <div class="d-inline-block mr-30 wow animate__animated animate__fadeIn" data-wow-delay=".0s"><a class="icon-socials icon-twitter color-gray-500" href="https://twitter.com">Twitter</a></div>
-                  <div class="d-inline-block mr-30 wow animate__animated animate__fadeIn" data-wow-delay=".2s"><a class="icon-socials icon-linked color-gray-500" href="https://www.linkedin.com">LinkedIn</a></div>
-                  <div class="d-inline-block wow animate__animated animate__fadeIn" data-wow-delay=".4s"><a class="icon-socials icon-insta color-gray-500" href="https://www.instagram.com">Instagram</a></div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </footer>
-    <div class="progressCounter progressScroll hover-up hover-neon-2">
-      <div class="progressScroll-border">
-        <div class="progressScroll-circle"><span class="progressScroll-text"><i class="fi-rr-arrow-small-up"></i></span></div>
-      </div>
-    </div>
-    <script src="assets/js/vendors/modernizr-3.6.0.min.js"></script>
-    <script src="assets/js/vendors/jquery-3.6.0.min.js"></script>
-    <script src="assets/js/vendors/jquery-migrate-3.3.0.min.js"></script>
-    <script src="assets/js/vendors/bootstrap.bundle.min.js"></script>
-    <script src="assets/js/vendors/waypoints.js"></script>
-    <script src="assets/js/vendors/wow.js"></script>
-    <script src="assets/js/vendors/text-type.js"></script>
-    <script src="assets/js/vendors/swiper-bundle.min.js"></script>
-    <script src="assets/js/vendors/jquery.progressScroll.min.js"></script>
-    <script src="assets/js/main.js?v=2.0"></script>
-  </body>
-
-{% endblock content %}
+    {% endblock content %}

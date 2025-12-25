@@ -1,7 +1,7 @@
-{% load static %}
 <!DOCTYPE html>
+{% load static %}
 <html lang="en">
-<head>
+  <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
@@ -10,110 +10,170 @@
     <meta name="description" content="Index page">
     <meta name="keywords" content="index, page">
     <meta name="author" content="">
+    <link rel="shortcut icon" type="image/x-icon" href="assets/imgs/template/favicon.svg">
+      <link rel="stylesheet" href="{% static 'css/style.css' %}">
 
-    <!-- FIX: static -->
-    <link rel="shortcut icon" type="image/x-icon" href="{% static 'assets/imgs/template/favicon.svg' %}">
-<link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <title>Genz - Personal Blog  HTML Template</title>
+  </head>
 
-    <title>Genz - Personal Blog HTML Template</title>
-</head>
-
-<body>
-
-<div id="preloader-active">
-    <div class="preloader d-flex align-items-center justify-content-center">
-        <div class="preloader-inner position-relative">
-            <div class="text-center">
-                <!-- FIX: static -->
-                <img class="mb-10" src="{% static 'assets/imgs/template/favicon.svg' %}" alt="GenZ">
-                <div class="preloader-dots"></div>
-            </div>
-        </div>
-    </div>
-</div>
-
-<header class="header sticky-bar bg-gray-900">
-    <div class="container">
+  <header class="header sticky-bar bg-gray-900">
+      <div class="container">
         <div class="main-header">
-            <div class="header-logo">
-                <a class="d-flex" href="index.html">
-                    <!-- FIX: static -->
-                    <img class="logo-night" alt="GenZ" src="{% static 'assets/imgs/template/logo.svg' %}">
-                    <img class="d-none logo-day" alt="GenZ" src="{% static 'assets/imgs/template/logo-day.svg' %}">
-                </a>
-            </div>
+          <div class="header-logo"><a class="d-flex" href="index.html"><img class="logo-night" alt="GenZ" src="assets/imgs/template/logo.svg"><img class="d-none logo-day" alt="GenZ" src="assets/imgs/template/logo-day.svg"></a></div>
+          <div class="header-nav">
+            <nav class="nav-main-menu d-none d-xl-block">
+              <ul class="main-menu">
+                <li class="has-children"><a class="active" href={% url 'home' %}>Home</a>
 
-            <div class="header-nav">
-                <nav class="nav-main-menu d-none d-xl-block">
-                    <ul class="main-menu">
-                        <li class="has-children"><a class="active" href="index.html">Home</a></li>
-                        <li><a class="color-gray-500" href="page-contact.html">Contact</a></li>
-                    </ul>
-                </nav>
-                <div class="burger-icon burger-icon-white">
-                    <span class="burger-icon-top"></span>
-                    <span class="burger-icon-mid"></span>
-                    <span class="burger-icon-bottom"></span>
-                </div>
+                </li>
+                <li class="has-children"><a class="color-gray-500" href="page-about.html">About Me</a>
+                  <ul class="sub-menu">
+                    <li><a class="color-gray-500" href="page-portfolio.html">My Portfolio</a></li>
+                    <li><a class="color-gray-500" href="page-portfolio-2.html">My Portfolio 2</a></li>
+                    <li><a class="color-gray-500" href="portfolio-details.html">Portfolio Details</a></li>
+                  </ul>
+                </li>
+                <li class="has-children"><a class="color-gray-500" href="#">Category</a>
+                  <ul class="sub-menu two-col">
+                    <li><a class="color-gray-500" href="blog-archive.html">Blog Category 1</a></li>
+                    <li><a class="color-gray-500" href="blog-archive-2.html">Blog Category 2</a></li>
+                    <li><a class="color-gray-500" href="blog-archive-3.html">Blog Category 3</a></li>
+                    <li><a class="color-gray-500" href="blog-archive-4.html">Blog Category 4</a></li>
+                    <li><a class="color-gray-500" href="blog-archive-5.html">Blog Category 5</a></li>
+                  </ul>
+                </li>
+                <li class="has-children"><a class="color-gray-500" href="#">Single Post</a>
+                  <ul class="sub-menu two-col">
+                    <li><a class="color-gray-500" href="single-sidebar.html">Blog Single 1</a></li>
+                    <li><a class="color-gray-500" href="single-no-sidebar.html">Blog Single 2</a></li>
+                    <li><a class="color-gray-500" href="single-center.html">Blog Single 3</a></li>
+                  </ul>
+                </li>
+                <li class="has-children"><a class="color-gray-500" href="#">Pages</a>
+                  <ul class="sub-menu two-col">
+                    <li><a class="color-gray-500" href="page-about.html">About</a></li>
+                    <li><a class="color-gray-500" href="page-author.html">Author posts</a></li>
+                    <li><a class="color-gray-500" href="page-contact.html">Contact</a></li>
+                    <li><a class="color-gray-500" href="page-search.html">Search results</a></li>
+                    <li><a class="color-gray-500" href="page-login.html">Login</a></li>
+                    <li><a class="color-gray-500" href="page-signup.html">Signup</a></li>
+                    <li><a class="color-gray-500" href="page-404.html">Page 404</a></li>
+                  </ul>
+                </li>
+                <li><a class="color-gray-500" href="page-contact.html">Contact</a></li>
+              </ul>
+            </nav>
+            <div class="burger-icon burger-icon-white"><span class="burger-icon-top"></span><span class="burger-icon-mid"></span><span class="burger-icon-bottom"></span></div>
+          </div>
+          <div class="header-right text-end"><a class="btn btn-search" href="#"></a>
+            <div class="form-search p-20">
+              <form action="#">
+                <input class="form-control" type="text" placeholder="Search">
+                <input class="btn-search-2" type="submit" value="">
+              </form>
+              <div class="popular-keywords text-start mt-20">
+                <p class="mb-10 color-white">Popular tags:</p><a class="color-gray-600 mr-10 font-xs" href="#"># Travel,</a><a class="color-gray-600 mr-10 font-xs" href="#"># Tech,</a><a class="color-gray-600 mr-10 font-xs" href="#"># Movie</a><a class="color-gray-600 mr-10 font-xs" href="#"># Lifestyle</a><a class="color-gray-600 mr-10 font-xs" href="#"># Sport</a>
+              </div>
             </div>
-
-            <div class="header-right text-end">
-                <div class="switch-button">
-                    <div class="form-check form-switch">
-                        <input class="form-check-input" id="flexSwitchCheckChecked" type="checkbox" role="switch">
-                    </div>
-                </div>
-            </div>
+            <div class="switch-button">
+              <div class="form-check form-switch">
+                <input class="form-check-input" id="flexSwitchCheckChecked" type="checkbox" role="switch" checked="">
+              </div>
+            </div><a class="btn btn-linear d-none d-sm-inline-block hover-up hover-shadow" href="page-login.html">Subscribe</a>
+          </div>
         </div>
-    </div>
-</header>
-
+      </div>
+    </header>
 {% block content %}
 
 {% endblock content %}
 
 <footer class="footer">
-    <div class="container">
+      <div class="container">
         <div class="footer-1 bg-gray-850 border-gray-800">
-            <div class="row">
-                <div class="col-lg-4 mb-30">
-                    <a href="index.html">
-                        <!-- FIX: static -->
-                        <img class="logo-night" src="{% static 'assets/imgs/template/logo.svg' %}" alt="Genz">
-                        <img class="d-none logo-day" src="{% static 'assets/imgs/template/logo-day.svg' %}" alt="GenZ">
-                    </a>
-                </div>
+          <div class="row">
+            <div class="col-lg-4 mb-30"><a class="wow animate__animated animate__fadeInUp" href="index.html"><img class="logo-night" src="assets/imgs/template/logo.svg" alt="Genz"><img class="d-none logo-day" alt="GenZ" src="assets/imgs/template/logo-day.svg"></a>
+              <p class="mb-20 mt-20 text-sm color-gray-500 wow animate__animated animate__fadeInUp">When an unknown prnoto sans took a galley and scrambled it to make specimen book not only five When an unknown prnoto sans took a galley and scrambled it to five centurie.</p>
+              <h6 class="color-white mb-5 wow animate__animated animate__fadeInUp">Address</h6>
+              <p class="text-sm color-gray-500 wow animate__animated animate__fadeInUp">123 Main Street<br>New York, NY 10001</p>
             </div>
+            <div class="col-lg-4 mb-30">
+              <h6 class="text-lg mb-30 color-white wow animate__animated animate__fadeInUp">Categories</h6>
+              <div class="row">
+                <div class="col-6">
+                  <ul class="menu-footer">
+                    <li class="wow animate__animated animate__fadeInUp"><a class="color-gray-500" href="blog-archive.html">Action</a></li>
+                    <li class="wow animate__animated animate__fadeInUp"><a class="color-gray-500" href="blog-archive.html">Business</a></li>
+                    <li class="wow animate__animated animate__fadeInUp"><a class="color-gray-500" href="blog-archive.html">Adventure</a></li>
+                    <li class="wow animate__animated animate__fadeInUp"><a class="color-gray-500" href="blog-archive.html">Canada</a></li>
+                    <li class="wow animate__animated animate__fadeInUp"><a class="color-gray-500" href="blog-archive.html">America</a></li>
+                    <li class="wow animate__animated animate__fadeInUp"><a class="color-gray-500" href="blog-archive.html">Curiosity</a></li>
+                  </ul>
+                </div>
+                <div class="col-6">
+                  <ul class="menu-footer">
+                    <li class="wow animate__animated animate__fadeInUp"><a class="color-gray-500" href="blog-archive.html">Animal</a></li>
+                    <li class="wow animate__animated animate__fadeInUp"><a class="color-gray-500" href="blog-archive.html">Dental</a></li>
+                    <li class="wow animate__animated animate__fadeInUp"><a class="color-gray-500" href="blog-archive.html">Biology</a></li>
+                    <li class="wow animate__animated animate__fadeInUp"><a class="color-gray-500" href="blog-archive.html">Design</a></li>
+                    <li class="wow animate__animated animate__fadeInUp"><a class="color-gray-500" href="blog-archive.html">Breakfast</a></li>
+                    <li class="wow animate__animated animate__fadeInUp"><a class="color-gray-500" href="blog-archive.html">Dessert</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4 mb-30">
+              <h4 class="text-lg mb-30 color-white wow animate__animated animate__fadeInUp">Newsletter</h4>
+              <p class="text-base color-gray-500 wow animate__animated animate__fadeInUp">Sign up to be first to receive the latest stories inspiring us, case studies, and industry news.</p>
+              <div class="form-newsletters mt-15 wow animate__animated animate__fadeInUp">
+                <form action="#">
+                  <div class="form-group">
+                    <input class="input-name border-gray-500" type="text" placeholder="Your name">
+                  </div>
+                  <div class="form-group">
+                    <input class="input-email border-gray-500" type="email" placeholder="Emaill address">
+                  </div>
+                  <div class="form-group mt-20">
+                    <button class="btn btn-linear hover-up">
+                      Subscribe
+                      <i class="fi-rr-arrow-small-right"></i>
+                    </button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+          <div class="footer-bottom border-gray-800">
+            <div class="row">
+              <div class="col-lg-5 text-center text-lg-start">
+                <p class="text-base color-white wow animate__animated animate__fadeIn">© Created by<a class="copyright" href="http://alithemes.com" target="_blank"> AliThemes.com</a></p>
+              </div>
+              <div class="col-lg-7 text-center text-lg-end">
+                <div class="box-socials">
+                  <div class="d-inline-block mr-30 wow animate__animated animate__fadeIn" data-wow-delay=".0s"><a class="icon-socials icon-twitter color-gray-500" href="https://twitter.com">Twitter</a></div>
+                  <div class="d-inline-block mr-30 wow animate__animated animate__fadeIn" data-wow-delay=".2s"><a class="icon-socials icon-linked color-gray-500" href="https://www.linkedin.com">LinkedIn</a></div>
+                  <div class="d-inline-block wow animate__animated animate__fadeIn" data-wow-delay=".4s"><a class="icon-socials icon-insta color-gray-500" href="https://www.instagram.com">Instagram</a></div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
+      </div>
+    </footer>
+    <div class="progressCounter progressScroll hover-up hover-neon-2">
+      <div class="progressScroll-border">
+        <div class="progressScroll-circle"><span class="progressScroll-text"><i class="fi-rr-arrow-small-up"></i></span></div>
+      </div>
     </div>
-</footer>
+    <script src="{% static 'js/vendors/modernizr-3.6.0.min.js'%}"></script>
+    <script src="{% static 'js/vendors/jquery-3.6.0.min.js'%}"></script>
+    <script src="{% static 'js/vendors/jquery-migrate-3.3.0.min.js'%}"></script>
+    <script src="{% static 'js/vendors/bootstrap.bundle.min.js'%}"></script>
+    <script src="{% static 'js/vendors/waypoints.js'%}"></script>
+    <script src="{% static 'js/vendors/wow.js'%}"></script>
+    <script src="{% static 'js/vendors/text-type.js'%}"></script>
+    <script src="{% static 'js/vendors/swiper-bundle.min.js'%}"></script>
+    <script src="{% static 'js/vendors/jquery.progressScroll.min.js'%}"></script>
+    <script src="{% static 'js/main.js'%}"></script>
 
-<div class="progressCounter progressScroll hover-up hover-neon-2">
-    <div class="progressScroll-border">
-        <div class="progressScroll-circle">
-            <span class="progressScroll-text">
-                <i class="fi-rr-arrow-small-up"></i>
-            </span>
-        </div>
-    </div>
-</div>
-
-<!-- FIX: script src -->
-
-<{% load static %}
-
-<script src="{% static 'js/vendors/modernizr-3.6.0.min.js' %}"></script>
-<script src="{% static 'js/vendors/jquery-3.6.0.min.js' %}"></script>
-<script src="{% static 'js/vendors/jquery-migrate-3.3.0.min.js' %}"></script>
-<script src="{% static 'js/vendors/bootstrap.bundle.min.js' %}"></script>
-<script src="{% static 'js/vendors/waypoints.js' %}"></script>
-<script src="{% static 'js/vendors/wow.js' %}"></script>
-<script src="{% static 'js/vendors/text-type.js' %}"></script>
-<script src="{% static 'js/vendors/swiper-bundle.min.js' %}"></script>
-<script src="{% static 'js/vendors/jquery.progressScroll.min.js' %}"></script>
-<script src="{% static 'js/main.js' %}"></script>
-
-
-
-</body>
 </html>
