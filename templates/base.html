@@ -10,7 +10,7 @@
     <meta name="description" content="Index page">
     <meta name="keywords" content="index, page">
     <meta name="author" content="">
-    <link rel="shortcut icon" type="image/x-icon" href="assets/imgs/template/favicon.svg">
+    <link rel="shortcut icon" type="image/x-icon" href="{% static '/imgs/template/favicon.svg'%}">
       <link rel="stylesheet" href="{% static 'css/style.css' %}">
 
     <title>Genz - Personal Blog  HTML Template</title>
@@ -24,45 +24,21 @@
             <nav class="nav-main-menu d-none d-xl-block">
               <ul class="main-menu">
                 <li class="has-children"><a class="active" href={% url 'home' %}>Home</a>
-
                 </li>
-                <li class="has-children"><a class="color-gray-500" href="page-about.html">About Me</a>
-                  <ul class="sub-menu">
-                    <li><a class="color-gray-500" href="page-portfolio.html">My Portfolio</a></li>
-                    <li><a class="color-gray-500" href="page-portfolio-2.html">My Portfolio 2</a></li>
-                    <li><a class="color-gray-500" href="portfolio-details.html">Portfolio Details</a></li>
-                  </ul>
-
-
-                </li>
-                <li class="has-children"><a class="color-gray-500" href="#">Category</a>
+                <li class="has-children"><a class="color-gray-500" href="#">Project</a>
                   <ul class="sub-menu two-col">
-                    <li><a class="color-gray-500" href="blog-archive.html">Blog Category 1</a></li>
-                    <li><a class="color-gray-500" href="blog-archive-2.html">Blog Category 2</a></li>
-                    <li><a class="color-gray-500" href="blog-archive-3.html">Blog Category 3</a></li>
-                    <li><a class="color-gray-500" href="blog-archive-4.html">Blog Category 4</a></li>
-                    <li><a class="color-gray-500" href="blog-archive-5.html">Blog Category 5</a></li>
+                        {% for i in project %}
+                            <a href="{% url 'project' i.pk %}"> {{ i.name }}</a><br>
+
+                      {% endfor %}
                   </ul>
                 </li>
-                <li class="has-children"><a class="color-gray-500" href="#">Single Post</a>
-                  <ul class="sub-menu two-col">
-                    <li><a class="color-gray-500" href="single-sidebar.html">Blog Single 1</a></li>
-                    <li><a class="color-gray-500" href="single-no-sidebar.html">Blog Single 2</a></li>
-                    <li><a class="color-gray-500" href="single-center.html">Blog Single 3</a></li>
-                  </ul>
-                </li>
+
                 <li class="has-children"><a class="color-gray-500" href="#">Pages</a>
                   <ul class="sub-menu two-col">
-                    <li><a class="color-gray-500" href="page-about.html">About</a></li>
-                    <li><a class="color-gray-500" href="page-author.html">Author posts</a></li>
-                    <li><a class="color-gray-500" href="page-contact.html">Contact</a></li>
-                    <li><a class="color-gray-500" href="page-search.html">Search results</a></li>
-                    <li><a class="color-gray-500" href="page-login.html">Login</a></li>
-                    <li><a class="color-gray-500" href="page-signup.html">Signup</a></li>
-                    <li><a class="color-gray-500" href="page-404.html">Page 404</a></li>
+                    <li><a class="color-gray-500" href="{% url 'page_404' %}">Page 404</a></li>
                   </ul>
                 </li>
-                <li><a class="color-gray-500" href="page-contact.html">Contact</a></li>
               </ul>
             </nav>
             <div class="burger-icon burger-icon-white"><span class="burger-icon-top"></span><span class="burger-icon-mid"></span><span class="burger-icon-bottom"></span></div>
